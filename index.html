@@ -11,7 +11,16 @@
     <title>BlogSpace</title>
 </head>
 <body>
-    <nav class="navbar"><h1 class="navbar-title">BlogSpace</h1></nav>
+    <nav class="navbar">
+        <h1 class="navbar-title">BlogSpace</h1>
+    </nav>
+    <form>
+        <label for="post-title">Title:</label>
+        <input id="post-title" type="text" />
+        <label for="post-body">Body:</label>
+        <textarea id="post-body"></textarea>
+        <button type="button">Post</button>
+    </form>
     <div id="blog-list" class="blog-list"></div>
 </body>
 </html>
