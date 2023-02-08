@@ -13,4 +13,25 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #E9F1FA;
+    font-family: 'Karla', sans-serif;
+}
+
+.navbar {
+    background-color: #00ABE4;
+    color: #FFF;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-title {
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.blog-list {
+    padding: 4rem 1rem;
 }
