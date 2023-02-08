@@ -13,12 +13,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #E9F1FA;
+    background-color: #DDD0C8;
     font-family: 'Karla', sans-serif;
 }
 
 .navbar {
-    background-color: #00ABE4;
+    background-color: #323232;
     color: #FFF;
     height: 3rem;
     display: flex;
@@ -33,5 +33,21 @@ body {
 }
 
 .blog-list {
-    padding: 4rem 1rem;
+    padding: 1rem;
+}
+
+form {
+    background-color: #CD9C8A;
+    padding: 5rem 35rem 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+button {
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: none;
+    height: 2rem;
 }
