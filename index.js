@@ -2,26 +2,24 @@ const blogList = document.getElementById("blog-list")
 const form = document.getElementById("new-post")
 let postsArray = []
 
-const renderPosts = (title, body) => {
-    let html = `
-                <h3>${title}</h3>
-                <p>${body}</p>
+const renderPosts = () => {
+    let html = ""
+    
+    for (let post of postsArray) {
+        html += `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
                 <hr />
-                ${blogList.innerHTML}
             `
-    return html
+    }
+    blogList.innerHTML = html
 }
 
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
     .then(data => {
         postsArray = data.slice(0, 5)
-        let html = ""
-
-        for (let posts of postsArray) {
-            html += renderPosts(posts.title, posts.body)
-        }
-        blogList.innerHTML = html
+        renderPosts()
     })
 
     form.addEventListener("submit", (event) => {
@@ -43,7 +41,8 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
         })
             .then(res => res.json())
             .then(post => {
-
-            blogList.innerHTML = renderPosts(post.title, post.body)
+                postsArray.unshift(post)
+                renderPosts()
+                form.reset()
             })
     })
